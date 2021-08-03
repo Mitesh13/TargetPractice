@@ -10,6 +10,7 @@ let coordinates = {};
 box.style.left = coordinates.x + "px";
 box.style.top = coordinates.y + "px";
 box.classList.add("box");
+console.log(window.innerHeight, window.innerWidth);
 
 const initGame = () => {
   let boxSizeNode = document.getElementById("boxSize");
@@ -20,8 +21,8 @@ const initGame = () => {
   setTimeout(() => {
     gameSettingsNode.style.display = "none";
     gameNode.style.display = "block";
-    coordinates.x = Math.random() * (1300 - computedBoxSize);
-    coordinates.y = Math.random() * (600 - computedBoxSize);
+    coordinates.x = Math.random() * (window.innerWidth - computedBoxSize);
+    coordinates.y = Math.random() * (window.innerHeight - computedBoxSize);
     box.style.left = coordinates.x + "px";
     box.style.top = coordinates.y + "px";
     console.log(coordinates);
@@ -39,8 +40,8 @@ const game = () => {
 
     if (e.target.classList.contains("box")) {
       console.log("wow");
-      coordinates.x = Math.random() * (1300 - computedBoxSize);
-      coordinates.y = Math.random() * (600 - computedBoxSize);
+      coordinates.x = Math.random() * (window.innerWidth - computedBoxSize);
+      coordinates.y = Math.random() * (window.innerHeight - computedBoxSize);
       console.log(coordinates.y);
       box.style.left = coordinates.x + "px";
       box.style.top = coordinates.y + "px";
