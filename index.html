@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Click</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="gameSettings">
+        
+        <span>Target Size:</span>
+        <div class="rangeWrapper">
+            <span>50</span>
+            <input type="range" name="boxSize" id="boxSize" value="100" step="50" min="50" max="300">
+            <span>300</span>
+        </div>
+        <button onmouseup="initGame()">Start!</button>
+    </div>
+    <div id="game">
+        <p id="scoreCard">
+            Score <span id="score">0</span>
+        </p>
+        <div id="gameOver">
+            <p>Game Over!</p>
+            <p class="final-score">Your Score: <span id="final-score">0</span></p>
+            <button onmouseup="resetGame()">Reset</button>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Comic Sans MS", serif;
+}
+body {
+  height: 100vh;
+}
+
+#game {
+  display: none;
+}
+.box {
+  height: 50px;
+  width: 50px;
+  background-color: red;
+  position: relative;
+}
+#gameOver,
+#gameSettings {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.85);
+  z-index: 999;
+}
+#gameSettings {
+  display: flex;
+  background-color: unset;
+  font-size: 28px;
+}
+.rangeWrapper {
+  margin: 20px 0;
+  padding: 5px 0;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  font-size: 18px;
+}
+#gameOver p {
+  color: white;
+  font-size: 3em;
+  text-transform: uppercase;
+}
+
+.final-score {
+  font-size: 1.5em !important;
+  padding: 15px 0;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 28px;
+  margin: 15px 0;
+  cursor: pointer;
+}
+#scoreCard {
+  text-align: center;
+  font-size: 1.5em;
+  padding: 10px 0;
+}
